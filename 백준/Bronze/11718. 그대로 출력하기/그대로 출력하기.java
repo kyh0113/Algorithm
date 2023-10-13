@@ -1,14 +1,15 @@
-import java.util.Scanner;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Main {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        
-        while (scanner.hasNextLine()) {
-            String line = scanner.nextLine();
+    public static void main(String args[]) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        String line;
+
+        while ((line = bufferedReader.readLine()) != null) {
             System.out.println(line);
         }
-        
-        scanner.close();
     }
 }
